@@ -1,0 +1,18 @@
+.example-form {
+    
+    max-width: 800px;
+    width: 40%;
+    max-height:570px;
+  }
+  
+  .example-form> * {
+    width: 100%;
+  }
+  h3{
+    text-align: center;
+  }
+  mat-card{
+    width:80%;
+    margin-left:280px;
+    margin-top: 10px;
+}

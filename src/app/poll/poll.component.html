@@ -1,0 +1,31 @@
+       my name{{titel}}
+    <form [formGroup]="fname"  #userform="ngForm">
+        <!-- <div  fxLayout="row">
+             <input type="text" formControlName="fname" placeholder="enter first name">
+        </div> -->
+        <div  fxLayout="row">
+                <input type="text" formControlName="fname" placeholder="enter first name">
+                <span *ngIf="fname.controls['fname'].hasError('required')">
+                       enter the name
+                </span>
+           </div>
+           <div  fxLayout="row">
+                <input type="text" formControlName="lname" placeholder="enter last name">
+                <span *ngIf="fname.controls['lname'].hasError('required')">
+                        enter the  last name
+                 </span>
+           </div>
+           <div  fxLayout="row">
+                <input type="text" formControlName="email" placeholder="email-id">
+
+                <span *ngIf="fname.controls['email'].hasError('required')">
+                        enter the  email-id
+                 </span>
+           </div>
+
+           <div fxLayout="row">
+           
+             <button type="button" (click)='resetform()'>reset</button>
+           </div>
+    </form>
+    <button (click)="sub()" [disabled]="userform.invalid">submit</button>

@@ -1,0 +1,13 @@
+<form #databag="ngForm" (ngSubmit)="local(databag.value)">
+    <p>
+        <label>name</label>
+        <input type="text"  name="name" required [(ngModel)]="name" #dot=ngModel>
+        <span [hidden]="dot.valid || dot.pristine">enter is require</span>
+    </p>
+
+    <p>
+        <label>phone</label>
+        <input type="text"  name="phone" required  [(ngModel)]="phone">
+    </p>
+    <button type="submit">submit</button>
+</form>

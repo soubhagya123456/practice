@@ -1,0 +1,24 @@
+<form #userm= "ngForm">
+    <!-- {{userm.value | json}} -->
+    {{usermodel | json}}
+    <div class="form-Group">
+       <label>NAME</label>
+       <input type="text" class="form-control" name="first" [ngModel]="usermodel.name">
+    </div>
+
+    <div class="form-Group">
+        <label>class</label>
+        <input type="text" class="form-control" name="classes" [ngModel]="usermodel.name">
+     </div>
+
+     <div class="form-Group">
+        <label>school</label>
+        <input type="text" class="form-control" name="school" [ngModel]="usermodel.name">
+     </div>
+</form>
+
+
+
+
+
+

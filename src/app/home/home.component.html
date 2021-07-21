@@ -1,0 +1,29 @@
+<mat-sidenav-container fullscreen>
+
+<mat-sidenav #active opened mode="side" position="start">
+        <mat-list>
+                <mat-list-item><a [routerLink]="['/table']">Family member</a></mat-list-item>
+                <mat-divider></mat-divider>
+                <mat-list-item><a>User info</a></mat-list-item>
+                <mat-divider></mat-divider>
+                <mat-list-item><a [routerLink]="['/login']">Logout</a></mat-list-item>
+              </mat-list>
+</mat-sidenav>
+<mat-sidenav-content>
+        <mat-toolbar color="primary">
+            <button mat-icon-button (click)="active.toggle()">
+                <mat-icon>menu</mat-icon>
+            </button>
+                My App
+                <span class="vv"></span>
+                <button mat-flat-button color="primary"><i class="material-icons">add_circle</i>&nbsp;<a routerLink="/pop">Add Family Members</a></button>      
+            </mat-toolbar>
+         <div>
+             <b><h3>No record found</h3></b>
+         </div>
+         <!-- table -->
+         <!-- <app-table></app-table>    -->
+         <!-- <router-outlet></router-outlet> -->
+   </mat-sidenav-content>
+</mat-sidenav-container>
+

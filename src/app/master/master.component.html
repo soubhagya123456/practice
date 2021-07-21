@@ -1,0 +1,53 @@
+
+<form class="example-form" align="center">
+         <h3>Reactive Form Table</h3>
+         <mat-divider></mat-divider>
+    <p>
+         
+        <mat-form-field class="example-full-width">
+            <input matInput placeholder="First name" >
+          </mat-form-field>
+    </p>
+
+    <p>
+           
+           <mat-form-field class="example-full-width">
+               <input matInput placeholder="Last name">
+             </mat-form-field>
+       </p>
+
+       <p>
+            <mat-form-field>
+                    <mat-label>Mutual status</mat-label>
+                    <mat-select>
+                      <mat-option>married</mat-option>
+                      <mat-option>Unmarried</mat-option>
+                      <mat-option>Single</mat-option>  
+                     
+                    </mat-select>
+                  </mat-form-field>
+       </p>
+       <p>
+           <label><b>Gender</b></label>
+            <mat-radio-group aria-label="Select an option">
+                    <mat-radio-button value="1">Male</mat-radio-button>
+                    <mat-radio-button value="2">Female</mat-radio-button>
+                  </mat-radio-group>
+       </p>
+       <p>
+         <label><b>Age > 18</b></label>
+        <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+          <mat-button-toggle value="bold">Yes</mat-button-toggle>
+          <mat-button-toggle value="italic">No</mat-button-toggle>
+         
+        </mat-button-toggle-group>
+       </p>
+       <p>
+            <mat-checkbox>Are you Indian?</mat-checkbox>
+       </p>
+    
+       <p>
+            <button mat-raised-button color="primary">Submit</button>
+            <button mat-raised-button color="accent">Reset</button>
+       </p>
+</form>

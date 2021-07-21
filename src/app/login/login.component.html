@@ -1,0 +1,81 @@
+<div fxLayout="row">
+    <div fxLayout="column" fxFlex="20"></div>
+    <div fxLayout="column" fxFlex="60">
+            <mat-card color="accent" align="center">
+                    <mat-card-title>
+                        Login form
+                    </mat-card-title>
+                    <mat-divider></mat-divider>
+                    <mat-card-content>
+                        
+                        <form [formGroup]="regi" #userform="ngForm" (ngSubmit)="onform(regi.value)" class="example-form">
+                   
+                            <p>
+                    
+                            <mat-form-field class="example-full-width">
+                               <input matInput placeholder="First name" formControlName="first" required>
+                            </mat-form-field>
+                            <mat-error >
+                                    <span *ngIf="!regi.get('first').valid && regi.get('first').touched">plz enetr the first name</span>
+                                   
+                                </mat-error>
+                           </p>
+                
+                             <p>
+                      
+                              <mat-form-field class="example-full-width">
+                              <input matInput placeholder="Last name" formControlName="last">
+                             </mat-form-field>
+                             <mat-error>
+                                    <span *ngIf="!regi.get('last').valid && regi.get('last').touched">plz enetr the last name</span>
+                                </mat-error>
+                           </p>
+                
+                           <p>
+                      
+                                <mat-form-field class="example-full-width">
+                                <input matInput placeholder="Email" formControlName="email">
+                               </mat-form-field>
+                               <mat-error>
+                                      <span *ngIf="!regi.get('email').valid && regi.get('email').touched">plz enetr the last name</span>
+                                  </mat-error>
+                             </p>
+                  
+                
+                           <p>
+                      
+                            <mat-form-field class="example-full-width">
+                            <input matInput placeholder="phone number" formControlName="phone">
+                            </mat-form-field>
+                            <mat-error>
+                                    <span *ngIf="!regi.get('phone').valid && regi.get('phone').touched">plz enetr the no</span>
+                                </mat-error>
+                           </p>
+
+                           <p>
+
+                                <mat-form-field>
+                                        <input matInput [matDatepicker]="picker" placeholder="Choose a date" formControlName="date">
+                                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                                        <mat-datepicker #picker startView="year" [startAt]="startDate"></mat-datepicker>
+                                      </mat-form-field>
+                                      <mat-error>
+                                            <span *ngIf="!regi.get('date').valid && regi.get('date').touched">plz enetr the no</span>
+                                        </mat-error>
+                                   </p>     
+                           
+                
+                           <p>
+        <button [disabled]="userform.invalid" [routerLink]="['/home']" mat-raised-button color="primary">Login</button>
+                           
+                          
+                           </p>
+                      </form>
+                      
+                </mat-card-content>
+                
+                
+                </mat-card>
+    </div>
+    <div fxLayout="column" fxFlex="20"></div>
+</div>

@@ -1,0 +1,16 @@
+.example-form {
+    min-width: 150px;
+    max-width: 700px;
+    width: 100%;
+    background-color:yellowgreen;
+  } 
+  
+  .example-full-width {
+    width: 30%;
+  }
+  
+  .mat-radio-button ~ .mat-radio-button {
+    margin-left: 16px;
+  }
+ 
+ 

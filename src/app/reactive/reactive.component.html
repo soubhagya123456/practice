@@ -1,0 +1,23 @@
+<form [formGroup]="app" (onSubmit)="submit()">
+  <p>
+      <label>first</label>
+      <input type="text" formControlName="first">
+  </p>
+  <p>
+    <label>last</label>
+    <input type="text" formControlName="last">
+</p>
+ <div formGroupName="adress">
+      <label>adress</label>
+    <p>
+        <label>city</label>
+        <input type="text" formControlName="city">
+    </p>
+    <p>
+        <label>pin</label>
+        <input type="text" formControlName="pin">
+    </p>
+ </div>
+ <button type="submit">Submit</button>
+</form>
+<p>{{app.value | json}}</p>

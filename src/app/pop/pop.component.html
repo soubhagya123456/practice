@@ -1,0 +1,58 @@
+
+<mat-card>
+                <mat-card-title>
+                                <h3><i>Add family members here....</i></h3>
+                            </mat-card-title>
+    </mat-card>
+
+<div fxLayout="row">
+        <div fxLayout="column" fxFlex="30%"></div>
+           
+               
+                <div fxLayout="column" fxFlex="30%">
+                        <div [formGroup]="orderForm">
+                                <div formArrayName="items"
+                                        *ngFor="let item of orderForm.get('items').controls; let i = index;">
+                                        <div [formGroupName]="i">
+                                                <p>
+                                                        <mat-form-field class="example-full-width">
+                              <input matInput placeholder="Enter firstname"
+                                                                        formControlName="first">
+                                                        </mat-form-field>
+                                                </p>
+                                                <p>
+                                                        <mat-form-field class="example-full-width">
+                                                                <input matInput placeholder="Enter last name"
+                                                                        formControlName="last">
+                                                        </mat-form-field>
+                                                </p>
+                                                <p>
+                                                        <mat-form-field class="example-full-width">
+                                                                <input matInput placeholder="Enter age"
+                                                                        formControlName="age">
+                                                        </mat-form-field>
+                                                </p>
+                                                <p>
+                                                        <mat-form-field class="example-full-width">
+                                                                <input matInput placeholder="Enter Mobile number"
+                                                                        formControlName="phone">
+                                                        </mat-form-field>
+                                                </p>
+                                              
+                                                <p>
+
+                 <button mat-flat-button color="primary"(click)="onSubmit()">add</button>&nbsp;
+                                                
+                
+                <button type="button" mat-raised-button color="warn">filldata</button>
+                                                </p>
+                                        </div>
+
+                                </div>
+                        </div>
+                </div>
+        
+        <div fxLayout="column" fxFlex="40%">
+<button mat-flat-button color="link" (click)="addItem()"><i class="material-icons">add_circle</i></button>
+        </div>
+</div>

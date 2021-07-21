@@ -1,0 +1,52 @@
+<!-- <form [formGroup]="app" (ngSubmit)="onsub()">
+   <div formArrayName="Arrayname">
+       <div  fxLayout="row" *ngFor="let data of app.controls.Arrayname.controls, index as i">
+         <input [formControlName]="i" placeholder="contact">
+         <input [formControlName]="i" placeholder="contact">
+         <input [formControlName]="i" placeholder="contact">
+         <input [formControlName]="i" placeholder="contact">
+         <button (click)="delete()">remove</button>
+       </div>
+   </div>
+   <button type="submit">sub</button>
+   
+</form>
+
+<button (click)="add()">adddata</button> -->
+
+
+
+
+
+
+
+<form [formGroup]="app" >
+    <p>form table</p>
+  <div formArrayName="Arrayname">
+      <div   *ngFor="let data of app.controls.Arrayname.controls, index as i" >
+         <div fxLayout="row">
+            <p>first mame</p>
+        <input [formControl]="name" placeholder="contact">
+      </div><br>
+      <div fxLayout="row">
+          <p>contact no</p>
+      <input [formControl]="name" placeholder="contact">
+    </div>
+    <div fxLayout="row">
+        <p>adress</p>
+    <input [formControl]="name" placeholder="adress">
+  </div>
+        <!-- <input formControlName="id" placeholder="id">
+        <input formControlName="phone" placeholder="phn">
+        <input formControlName="adress" placeholder="adress"> -->
+        <button (click)="delete()">remove</button>
+      </div>
+  </div>
+  
+  
+</form>
+
+<button (click)="add()">adddata</button>
+
+
+      
